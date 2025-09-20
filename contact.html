@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redes Restaurant — Fresh Seafood & Fine Dining | [Location]</title>
+  <meta name="description" content="Redes Restaurant serves fresh seafood and coastal cuisine crafted with passion. Reserve a table, explore our menu, and enjoy elegant dining in [Location]." />
+  <meta name="keywords" content="Redes Restaurant, seafood restaurant, fine dining, [Location] restaurant, reserve a table" />
+  <link rel="canonical" href="https://www.redescreation.in/">
+  <meta name="theme-color" content="#0c1b2a" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Redes Restaurant — Fresh Seafood & Fine Dining | [Location]">
+  <meta property="og:description" content="Fresh flavors crafted with passion. Reserve a table today.">
+  <meta property="og:url" content="https://www.redescreation.in/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=1600&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (optional inline data URI placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ff6b4a'/%3E%3Cpath d='M16 40c10 2 22-2 30-10-3 10-13 18-24 18-3 0-6-1-6-3z' fill='white'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --brand:#ff6b4a;         /* Primary (coral) */
+      --brand-2:#ff8b72;       /* Accent */
+      --dark:#0c1b2a;          /* Deep navy */
+      --mid:#13283f;
+      --text:#e6edf5;
+      --muted:#9eb0c6;
+      --bg:#0a1623;
+      --card:rgba(12,27,42,.7);
+      --white:#ffffff;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:18px;
+      --radius-lg:28px;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:linear-gradient(180deg,#0a1420 0%, #0b1a29 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:20px}
+    .btn{
+      display:inline-flex;align-items:center;gap:.6rem;
+      background:var(--brand);
+      color:#fff;border:0;border-radius:999px;
+      padding:.95rem 1.3rem;font-weight:700;
+      box-shadow:var(--shadow);transition:.25s transform,.25s box-shadow,.25s background;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(255,107,74,.35);background:#ff7657}
+    .btn.secondary{background:#12294a;color:#e5eef7;border:1px solid #27405f}
+    .btn.small{padding:.6rem 1rem;font-weight:600}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.4rem .8rem;border-radius:999px;color:#cfe0f7;font-size:.9rem}
+    .badge{background:rgba(255,107,74,.2);color:#ffcfc3;border:1px solid rgba(255,107,74,.35);padding:.3rem .6rem;border-radius:999px;font-weight:700;font-size:.78rem;letter-spacing:.04em}
+
+    /* Top bar */
+    .topbar{
+      background:#07111c;
+      border-bottom:1px solid rgba(255,255,255,.06);
+      font-size:.9rem;color:#b7c6dc
+    }
+    .topbar .wrap{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.5rem 0}
+    .social a{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid rgba(255,255,255,.18);border-radius:50%}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:60;
+      backdrop-filter: blur(6px);
+      background:rgba(9,18,30,.75);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;letter-spacing:.2px}
+    .logo .mark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--brand)}
+    .menu{display:flex;gap:1.2rem;align-items:center}
+    .menu a{padding:.6rem .8rem;border-radius:12px;color:#cfe0f7}
+    .menu a:hover{background:rgba(255,255,255,.06)}
+    .hamburger{display:none;background:transparent;border:0;width:44px;height:44px;border-radius:10px;color:#fff}
+    .cta-inline{display:flex;gap:.6rem;align-items:center}
+
+    /* Mobile menu */
+    .mobile{
+      position:fixed;inset:0 0 auto auto;top:72px;right:20px;left:auto;width:min(92vw,420px);
+      translate: 0 -16px;opacity:0;pointer-events:none;transition:.25s;
+      background:#0e2137;border:1px solid rgba(255,255,255,.1);border-radius:18px;box-shadow:var(--shadow)
+    }
+    .mobile.open{translate:0 0;opacity:1;pointer-events:auto}
+    .mobile nav{display:grid;padding:10px}
+    .mobile a{padding:12px 14px;border-radius:12px;color:#d9e6f6}
+    .mobile a:hover{background:rgba(255,255,255,.06)}
+    .mobile .row{display:flex;gap:10px;padding:10px}
+    .search{flex:1;background:#0b1c31;border:1px solid #233955;border-radius:12px;padding:.75rem 1rem;color:#d9e6f6}
+
+/* 
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff5a3c;
+    }
+
+    .btn {
+      background: #ff5a3c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e94b2d;
+    } */
+
+    /* Contact Section */
+    .contact-section {
+      padding: 60px 10%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-info h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      flex: 1;
+      background: #111d2f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #0b1829;
+      color: white;
+      font-size: 15px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-form button {
+      width: 100%;
+    }
+
+    .map {
+      margin-top: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 350px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Footer */
+    footer{background:#081422;border-top:1px solid rgba(255,255,255,.06);padding-top:50px}
+    .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:26px}
+    .copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:26px;padding:16px 0;color:#a7b8cf}
+
+    /* Utilities */
+    .hide{display:none}
+    .center{text-align:center}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .grid-3,.pricing,.blog{grid-template-columns:repeat(2,1fr)}
+      .split{grid-template-columns:1fr}
+    }
+    @media (max-width:760px){
+      .menu{display:none}
+      .hamburger{display:inline-grid;place-items:center}
+      .band .grid{grid-template-columns:1fr 1fr}
+      .grid-3,.pricing,.blog{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+      .hero{min-height:88vh}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= Topbar ======= -->
+  <div class="topbar" role="contentinfo" aria-label="Contact bar">
+    <div class="container wrap">
+      <div>
+        <span class="badge">Phone</span>
+        <a href="tel:+918374453536">+91 83744 53536</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="badge">Email</span>
+        <a href="mailto:info@redescreation.in">info@redescreation.in</a>
+      </div>
+      <div class="social" aria-label="Social links">
+        <a aria-label="Instagram" href="#" title="Instagram">⌁</a>
+        <a aria-label="Facebook" href="#" title="Facebook">f</a>
+        <a aria-label="Twitter" href="#" title="Twitter">t</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header role="banner">
+    <div class="container nav" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Redes Restaurant Home">
+        <span class="mark"><i class="fa-solid fa-shrimp"></i></span> <span>Redes Restaurant</span>
+      </a>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="cta-inline">
+        <a class="btn small" href="reserve.html" aria-label="Reserve a Table">Reserve a Table</a>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="row">
+        <input class="search" type="search" placeholder="Search…" aria-label="Search navigation">
+        <a class="social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="social" href="#" aria-label="Facebook"><i class="fa-solid fa-shrimp"></i></a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn" href="reserve.html">Reserve a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>We’d love to hear from you</h2>
+      <p><b>Phone:</b> +91 83744 53536</p>
+      <p><b>Email:</b> info@redescreation.in</p>
+      <p><b>Web:</b> www.redescreation.in</p>
+    </div>
+
+    <div class="contact-form">
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required>
+        <input type="email" id="email" placeholder="Email address" required>
+        <input type="tel" id="phone" placeholder="Phone number" required>
+        <input type="text" id="subject" placeholder="Subject">
+        <textarea id="message" placeholder="Tell us about your reservation or event..." required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.295235524147!2d78.3612!3d17.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93f84db7d9a9%3A0x79d7c2d65e0e9f9!2sGachibowli%2C%20Hyderabad%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000"></iframe>
+  </div>
+
+ <!-- ======= Footer ======= -->
+  <footer role="contentinfo">
+    <div class="container fgrid">
+      <div>
+        <div class="logo"><span class="mark"><i class="fa-solid fa-shrimp"></i></span><span>Redes Restaurant</span></div>
+        <p class="muted">Fresh flavors crafted with passion. Experience refined coastal cuisine in <strong>[Location]</strong>.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="menu.html">Menu</a><br><a href="gallery.html">Gallery</a></p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <p><a href="blog.html">Blog</a><br><a href="#faq">FAQ</a><br><a href="#">Privacy Policy</a><br><a href="#">Terms</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="muted">[Address]<br>Phone: <a href="tel:+918374453536">+91 83744 53536</a><br>Email: <a href="mailto:info@redescreation.in">info@redescreation.in</a></p>
+        <a class="btn small" href="reserve.html">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      © <span id="year"></span> Redes Restaurant. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const burger = document.getElementById('hamburger');
+    const mobile = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      const open = mobile.classList.toggle('open');
+      mobile.setAttribute('aria-hidden', String(!open));
+    });
+    // Close mobile on outside click
+    document.addEventListener('click', (e)=>{
+      if(!mobile.contains(e.target) && !burger.contains(e.target)) mobile.classList.remove('open');
+    });
+
+    // Simple form handler
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      alert("Thank you for contacting us, " + document.getElementById("name").value + "! We’ll get back to you soon.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

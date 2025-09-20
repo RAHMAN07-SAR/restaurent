@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redes Restaurant — Fresh Seafood & Fine Dining | [Location]</title>
+  <meta name="description" content="Redes Restaurant serves fresh seafood and coastal cuisine crafted with passion. Reserve a table, explore our menu, and enjoy elegant dining in [Location]." />
+  <meta name="keywords" content="Redes Restaurant, seafood restaurant, fine dining, [Location] restaurant, reserve a table" />
+  <link rel="canonical" href="https://www.redescreation.in/">
+  <meta name="theme-color" content="#0c1b2a" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Redes Restaurant — Fresh Seafood & Fine Dining | [Location]">
+  <meta property="og:description" content="Fresh flavors crafted with passion. Reserve a table today.">
+  <meta property="og:url" content="https://www.redescreation.in/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=1600&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (optional inline data URI placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ff6b4a'/%3E%3Cpath d='M16 40c10 2 22-2 30-10-3 10-13 18-24 18-3 0-6-1-6-3z' fill='white'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --brand:#ff6b4a;         /* Primary (coral) */
+      --brand-2:#ff8b72;       /* Accent */
+      --dark:#0c1b2a;          /* Deep navy */
+      --mid:#13283f;
+      --text:#e6edf5;
+      --muted:#9eb0c6;
+      --bg:#0a1623;
+      --card:rgba(12,27,42,.7);
+      --white:#ffffff;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:18px;
+      --radius-lg:28px;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:linear-gradient(180deg,#0a1420 0%, #0b1a29 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:20px}
+    .btn{
+      display:inline-flex;align-items:center;gap:.6rem;
+      background:var(--brand);
+      color:#fff;border:0;border-radius:999px;
+      padding:.95rem 1.3rem;font-weight:700;
+      box-shadow:var(--shadow);transition:.25s transform,.25s box-shadow,.25s background;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(255,107,74,.35);background:#ff7657}
+    .btn.secondary{background:#12294a;color:#e5eef7;border:1px solid #27405f}
+    .btn.small{padding:.6rem 1rem;font-weight:600}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.4rem .8rem;border-radius:999px;color:#cfe0f7;font-size:.9rem}
+    .badge{background:rgba(255,107,74,.2);color:#ffcfc3;border:1px solid rgba(255,107,74,.35);padding:.3rem .6rem;border-radius:999px;font-weight:700;font-size:.78rem;letter-spacing:.04em}
+
+    /* Top bar */
+    .topbar{
+      background:#07111c;
+      border-bottom:1px solid rgba(255,255,255,.06);
+      font-size:.9rem;color:#b7c6dc
+    }
+    .topbar .wrap{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.5rem 0}
+    .social a{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid rgba(255,255,255,.18);border-radius:50%}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:60;
+      backdrop-filter: blur(6px);
+      background:rgba(9,18,30,.75);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;letter-spacing:.2px}
+    .logo .mark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--brand)}
+    .menu{display:flex;gap:1.2rem;align-items:center}
+    .menu a{padding:.6rem .8rem;border-radius:12px;color:#cfe0f7}
+    .menu a:hover{background:rgba(255,255,255,.06)}
+    .hamburger{display:none;background:transparent;border:0;width:44px;height:44px;border-radius:10px;color:#fff}
+    .cta-inline{display:flex;gap:.6rem;align-items:center}
+
+    /* Mobile menu */
+    .mobile{
+      position:fixed;inset:0 0 auto auto;top:72px;right:20px;left:auto;width:min(92vw,420px);
+      translate: 0 -16px;opacity:0;pointer-events:none;transition:.25s;
+      background:#0e2137;border:1px solid rgba(255,255,255,.1);border-radius:18px;box-shadow:var(--shadow)
+    }
+    .mobile.open{translate:0 0;opacity:1;pointer-events:auto}
+    .mobile nav{display:grid;padding:10px}
+    .mobile a{padding:12px 14px;border-radius:12px;color:#d9e6f6}
+    .mobile a:hover{background:rgba(255,255,255,.06)}
+    .mobile .row{display:flex;gap:10px;padding:10px}
+    .search{flex:1;background:#0b1c31;border:1px solid #233955;border-radius:12px;padding:.75rem 1rem;color:#d9e6f6}
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* About Section */
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .about-text h5 {
+      color: #ff6b4a;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      margin-bottom: 20px;
+      color: #b5b5b5;
+    }
+    .about-list {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    .about-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .about-list li::before {
+      content: "<i class="fa-solid fa-check"></i>";
+      margin-right: 10px;
+      color: #2ecc71;
+    }
+    .btn-team {
+      background: #ff6b4a;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    /* Story Timeline */
+    .story {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .story h2 { font-size: 2rem; margin-bottom: 40px; }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .timeline-item {
+      background: #161b22;
+      padding: 20px;
+      border-left: 4px solid #ff6b4a;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Team */
+    .team {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .team h2 { font-size: 2rem; margin-bottom: 40px; }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .team-card {
+      background: #161b22;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+    }
+    .team-card img {
+      border-radius: 50%;
+      width: 120px; height: 120px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .team-card h3 { margin-bottom: 5px; }
+    .team-card p { color: #aaa; font-size: 0.9rem; }
+
+    /* Why Choose Us */
+    .why {
+      padding: 80px 0;
+      background: #161b22;
+      text-align: center;
+    }
+    .why h2 { font-size: 2rem; margin-bottom: 40px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .why-item {
+      background: #0d1117;
+      padding: 30px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .why-item:hover { transform: translateY(-8px); }
+    .why-item h3 { margin-bottom: 10px; color: #ff6b4a; }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .testimonials h2 { margin-bottom: 40px; }
+    .testimonial {
+      background: #161b22;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 20px auto;
+      display: none;
+    }
+    .testimonial.active { display: block; }
+    .testimonial p { color: #bbb; margin-bottom: 10px; }
+    .testimonial h4 { color: #fff; }
+
+    /* Contact */
+    form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    form input, form textarea{
+      background:#0b1c31;border:1px solid #233955;border-radius:12px;padding:12px 14px;color:#e6f0ff
+    }
+    form textarea{grid-column:1/-1;min-height:130px}
+    .map{border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);min-height:320px}
+
+    /* Footer */
+    footer{background:#081422;border-top:1px solid rgba(255,255,255,.06);padding-top:50px}
+    .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:26px}
+    .copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:26px;padding:16px 0;color:#a7b8cf}
+
+    /* Utilities */
+    .hide{display:none}
+    .center{text-align:center}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .grid-3,.pricing,.blog{grid-template-columns:repeat(2,1fr)}
+      .split{grid-template-columns:1fr}
+    }
+    @media (max-width:760px){
+      .menu{display:none}
+      .hamburger{display:inline-grid;place-items:center}
+      .band .grid{grid-template-columns:1fr 1fr}
+      .grid-3,.pricing,.blog{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+      .hero{min-height:88vh}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= Topbar ======= -->
+  <div class="topbar" role="contentinfo" aria-label="Contact bar">
+    <div class="container wrap">
+      <div>
+        <span class="badge">Phone</span>
+        <a href="tel:+918374453536">+91 83744 53536</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="badge">Email</span>
+        <a href="mailto:info@redescreation.in">info@redescreation.in</a>
+      </div>
+      <div class="social" aria-label="Social links">
+        <a aria-label="Instagram" href="#" title="Instagram">⌁</a>
+        <a aria-label="Facebook" href="#" title="Facebook">f</a>
+        <a aria-label="Twitter" href="#" title="Twitter">t</a>
+      </div>
+    </div>s
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header role="banner">
+    <div class="container nav" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Redes Restaurant Home">
+        <span class="mark"><i class="fa-solid fa-shrimp"></i></span> <span>Redes Restaurant</span>
+      </a>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="cta-inline">
+        <a class="btn small" href="reserve.html" aria-label="Reserve a Table">Reserve a Table</a>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="row">
+        <input class="search" type="search" placeholder="Search…" aria-label="Search navigation">
+        <a class="social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="social" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn" href="reserve.html">Reserve a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section container fade-in">
+    <div class="about-text">
+      <h5>About Us</h5>
+      <h2>Our story, mission, and values</h2>
+      <p>Founded on a love for the sea and a commitment to sustainability, Redes Restaurant partners with responsible fisheries and local producers. Our mission is simple: serve exceptional seafood that respects the ocean and delights our guests.</p>
+      <ul class="about-list">
+        <li>Sustainable sourcing & seasonal menus</li>
+        <li>Open kitchen & chef’s counter experiences</li>
+        <li>Private dining & bespoke events</li>
+      </ul>
+      <a href="#team" class="btn-team">Meet the Team</a>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1000" alt="Restaurant Interior">
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="story fade-in">
+    <div class="container">
+      <h2>Our Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>2010 - The Beginning</h3>
+          <p>Redes Restaurant opened its doors with a simple idea: bring the freshest seafood to the heart of the city.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>2015 - Recognition</h3>
+          <p>We were awarded “Best Seafood Restaurant” and expanded with a chef’s table experience.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>2022 - Today</h3>
+          <p>Continuing our mission of sustainable dining while offering innovative cuisine in a warm setting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team fade-in" id="team">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef">
+          <h3>John Doe</h3>
+          <p>Head Chef</p>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Manager">
+          <h3>Jane Smith</h3>
+          <p>Restaurant Manager</p>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Sous Chef">
+          <h3>Michael Brown</h3>
+          <p>Sous Chef</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why fade-in">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3><i class="fa-solid fa-house-tsunami"></i> Sustainability</h3>
+          <p>All our seafood is ethically sourced, protecting marine life and supporting local fisheries.</p>
+        </div>
+        <div class="why-item">
+          <h3><i class="fa-solid fa-kitchen-set"></i> Expertise</h3>
+          <p>Our chefs bring creativity and years of culinary excellence to every dish served.</p>
+        </div>
+        <div class="why-item">
+          <h3><i class="fa-solid fa-wine-glass"></i>Experience</h3>
+          <p>From private dining to bespoke wine pairings, we create experiences you’ll cherish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials fade-in">
+    <div class="container">
+      <h2>What Our Guests Say</h2>
+      <div class="testimonial active">
+        <p>“The best seafood dining experience I’ve ever had. Fresh, flavorful, and sustainable!”</p>
+        <h4>- Sarah L.</h4>
+      </div>
+      <div class="testimonial">
+        <p>“From the service to the ambiance, everything was flawless. Highly recommend Redes!”</p>
+        <h4>- David P.</h4>
+      </div>
+      <div class="testimonial">
+        <p>“A unique mix of fine dining and warm hospitality. Can’t wait to return!”</p>
+        <h4>- Maria G.</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="container fgrid">
+      <div>
+        <div class="logo"><span class="mark"><i class="fa-solid fa-shrimp"></i></span><span>Redes Restaurant</span></div>
+        <p class="muted">Fresh flavors crafted with passion. Experience refined coastal cuisine in <strong>[Location]</strong>.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="menu.html">Menu</a><br><a href="gallery.html">Gallery</a></p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <p><a href="blog.html">Blog</a><br><a href="#faq">FAQ</a><br><a href="#">Privacy Policy</a><br><a href="#">Terms</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="muted">[Address]<br>Phone: <a href="tel:+918374453536">+91 83744 53536</a><br>Email: <a href="mailto:info@redescreation.in">info@redescreation.in</a></p>
+        <a class="btn small" href="reserve.html">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      © <span id="year"></span> Redes Restaurant. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const burger = document.getElementById('hamburger');
+    const mobile = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      const open = mobile.classList.toggle('open');
+      mobile.setAttribute('aria-hidden', String(!open));
+    });
+    // Close mobile on outside click
+    document.addEventListener('click', (e)=>{
+      if(!mobile.contains(e.target) && !burger.contains(e.target)) mobile.classList.remove('open');
+    });
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const fadeOptions = { threshold: 0.2 };
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, fadeOptions);
+    fadeEls.forEach(el => fadeObserver.observe(el));
+
+    // Testimonials slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
